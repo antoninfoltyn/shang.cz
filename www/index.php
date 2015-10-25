@@ -25,10 +25,6 @@ $serverName = $_SERVER['SERVER_NAME'];
 
 if ($serverName == "127.0.0.1" || $serverName == "localhost") {
     Db::pripoj("localhost", "root", "", "shang");
-} elseif (preg_match('~shang.cz$~', $serverName)) {
-    Db::pripoj("10.33.126.27", "131_admin", "789456123", "shangcz_mo_db1");
-} elseif (preg_match('~musicolomouc.cz$~', $serverName)) {
-    Db::pripoj("10.33.126.27", "133_musicol", "789456123", "musicolomouccz_musicolomouc");
 } else {
     Shang:chyba("Chyba databáze!", "V souboru index.php se nepodařilo připojit k databázi, web je přesunut na nový hosting nebo byly přihlašovací údaje k databázi změněny.");
 }
