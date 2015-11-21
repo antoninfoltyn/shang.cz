@@ -1,4 +1,5 @@
-    private function parsujURL($parametry)
+<?php
+private function parsujURL($parametry)
     {
         // Odstranění bílých znaků a "/" kolem adresy
         $delka = trim($parametry["serverPhpSelf"], "/");
